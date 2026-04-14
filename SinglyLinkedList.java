@@ -68,8 +68,8 @@ public class SinglyLinkedList {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
         list.displayList();
-        list.insertAtFirst(1);
         list.insertAtFirst(2);
+        list.insertAtFirst(1);
         list.displayList();
         list.insertAtLast(3);
         list.insertAtLast(4);
