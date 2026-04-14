@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HCF {
+public class HighestCommonFactor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first number: ");
@@ -13,7 +13,7 @@ public class HCF {
                 hcf = i;
             }
         }
-        System.out.println("HCF is "+hcf);
+        System.out.println("Highest common factor is "+hcf);
         sc.close();
     }
 }
