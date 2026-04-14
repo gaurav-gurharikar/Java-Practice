@@ -31,10 +31,29 @@ public class SinglyLinkedList {
         currNode.next = newNode;
     }
 
-    //Insert at a position
-    //Delete first
-    //Delete last
-    //Delete position
+    //Insert at position
+
+    //Delete at first
+    public void deleteAtFirst() {
+        if(head == null) return;
+        head = head.next;
+    }
+
+    //Delete at last
+    public void deleteAtLast() {
+        if(head == null || head.next == null) {
+            head = null;
+            return;
+        }
+        Node currNode = head;
+        while(currNode.next.next!=null) {
+            currNode = currNode.next;
+        }
+        currNode.next = null;
+
+    }
+
+    //Delete at position
 
     //Display
     public void displayList() {
@@ -49,10 +68,14 @@ public class SinglyLinkedList {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
         list.displayList();
-        list.insertAtFirst(5);
-        list.insertAtFirst(4);
+        list.insertAtFirst(1);
+        list.insertAtFirst(2);
         list.displayList();
-        list.insertAtLast(6);
+        list.insertAtLast(3);
+        list.insertAtLast(4);
+        list.displayList();
+        list.deleteAtFirst();
+        list.deleteAtLast();
         list.displayList();
     }
 }
