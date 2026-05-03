@@ -35,6 +35,7 @@ public class SinglyLinkedList {
     public void insertAtPosition(int data, int position) {
         Node newNode = new Node(data);
         Node currNode = head;
+        Node prevNode = null;
         int counter = 1;
         if(position == 1) {
             newNode.next = head;
@@ -42,16 +43,16 @@ public class SinglyLinkedList {
             return;
         }
         while(currNode!=null) {
-            if((position-1)!=counter) {
+            if(position!=counter) {
                 counter++;
             }
             else {
-                newNode.next = currNode.next;
-                currNode.next = newNode;
+                prevNode.next = newNode;
+                newNode.next = currNode;
                 return;
             }
+            prevNode = currNode;
             currNode = currNode.next;
-
         }
     }
 
@@ -76,6 +77,27 @@ public class SinglyLinkedList {
     }
 
     //Delete at position
+    public void deleteAtPosition(int position) {
+        if(head==null) return;
+        Node currNode = head;
+        Node prevNode = null;
+        int counter = 1;
+        if(position==1) {
+            head=head.next;
+            return;
+        }
+        while(currNode!=null) {
+            if(position!=counter) {
+                counter++;
+            }
+            else {
+                prevNode.next = currNode.next;
+                return;
+            }
+            prevNode = currNode;
+            currNode = currNode.next;
+        }
+    }
 
     //Display
     public void displayList() {
@@ -101,6 +123,8 @@ public class SinglyLinkedList {
         list.displayList();
         list.insertAtFirst(1);
         list.insertAtPosition(9, 2);
+        list.displayList();
+        list.deleteAtPosition(2);
         list.displayList();
     }
 }
