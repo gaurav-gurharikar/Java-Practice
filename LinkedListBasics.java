@@ -1,8 +1,8 @@
 import java.util.*;
-public class ArrayListBasics {
+public class LinkedListBasics {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-
+        LinkedList<Integer> list = new LinkedList<>();
+        
         //Add
         list.add(50);
         list.add(20);
@@ -65,4 +65,4 @@ public class ArrayListBasics {
         System.out.println(list.contains(100));
 
     }
-} 
+}
