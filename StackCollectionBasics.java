@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class StackBasics {
+public class StackCollectionBasics {
 
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
