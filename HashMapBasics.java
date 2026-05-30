@@ -8,8 +8,6 @@ public class HashMapBasics {
         map.put("US", 80);
         map.put("China", 100);
         map.put("Russia", 80);
-
-        //Print all
         System.out.println(map);
 
         //Update value
@@ -29,6 +27,10 @@ public class HashMapBasics {
         //Search value for a key
         System.out.println(map.get("India"));
         System.out.println(map.get("abc"));
+
+        //Get all values
+        Collection<Integer> values = map.values();
+        System.out.println(values);
 
         //Iteration
         for(Map.Entry<String, Integer> e : map.entrySet()) {
