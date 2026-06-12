@@ -8,11 +8,11 @@ class Node {
     }
 }
 public class StackUsingLinkedList {
-     static Node top;
+    static Node top;
     static int size = 0;
 
-    public static void push(int value) {
-        Node newNode = new Node(value);
+    public static void push(int data) {
+        Node newNode = new Node(data);
         newNode.prev = top;
         top = newNode;
         size++;
