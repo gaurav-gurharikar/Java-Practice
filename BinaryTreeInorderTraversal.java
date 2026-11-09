@@ -26,20 +26,20 @@ public class BinaryTreeInorderTraversal {
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
-        list = preorderTraversal(root);
+        list = inorderTraversal(root);
         System.out.println(list);
     }
 
-    public static List<Integer> preorderTraversal(TreeNode root) {
+    public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        preorder(root, list);
+        inorder(root, list);
         return list;
     }
 
-    public static void preorder(TreeNode root, List<Integer> list) {
+    public static void inorder(TreeNode root, List<Integer> list) {
         if(root == null) return;
-        preorder(root.left, list);
+        inorder(root.left, list);
         list.add(root.val);
-        preorder(root.right, list);
+        inorder(root.right, list);
     }
 }
